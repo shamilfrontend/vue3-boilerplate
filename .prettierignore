@@ -1,0 +1,9 @@
+/k8s
+dist/
+public/
+coverage/
+node_modules/
+.yarn
+.nvmrc
+.browserslistrc
+*.ejs

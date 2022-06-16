@@ -1,0 +1,66 @@
+{
+  "root": true,
+
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "plugin:vue/vue3-recommended",
+    "@vue/typescript/recommended",
+    "prettier",
+    "prettier/prettier"
+  ],
+
+  "rules": {
+    "func-names": 0,
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowShortCircuit": true,
+        "allowTernary": false,
+        "allowTaggedTemplates": false
+      }
+    ],
+    "prefer-destructuring": ["error", { "array": false }],
+
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off",
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object"
+        ],
+        "pathGroups": [
+          { "pattern": "@/**", "group": "internal", "position": "before" },
+          { "pattern": "#/**", "group": "internal", "position": "before" }
+        ],
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ],
+
+    "vue/component-name-in-template-casing": ["error", "kebab-case"],
+    "vue/max-attributes-per-line": "warn",
+    "vue/html-closing-bracket-newline": "warn",
+    "vue/html-indent": "warn",
+
+    "@typescript-eslint/explicit-function-return-type": "error"
+  }
+}
